@@ -12,6 +12,54 @@
     #project-hero { padding: 12rem 4rem 4rem; background: var(--void); }
     .case-study-body { padding: 0 4rem 8rem; max-width: 1100px; margin: 0 auto; }
     .phase-heading { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); margin: 5rem 0 1.5rem; border-bottom: 1px solid var(--fog-md); padding-bottom: 1rem; }
+    
+    /* Recruiter-friendly image showcase styling */
+    .image-placeholder-block {
+      width: 100%;
+      background: #120e0b;
+      border: 1px solid var(--panel);
+      margin: 2.5rem 0;
+      padding: 1rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-radius: 4px;
+    }
+    .image-placeholder-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+      filter: brightness(0.9) contrast(1.05);
+      margin-bottom: 0.6rem;
+    }
+    .image-placeholder-block span {
+      display: block;
+      color: var(--ash);
+      letter-spacing: 0.05em;
+      margin-top: 0.4rem;
+    }
+    .image-wireframe-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #090b0c;
+      border: 1px dashed var(--panel);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 2rem;
+      color: var(--ash);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+    .image-wireframe-box strong {
+      color: var(--ember);
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+    }
   </style>
 </head>
 <body>
@@ -26,74 +74,158 @@
     </ul>
   </nav>
 
+  <!-- CASE STUDY HERO SECTION -->
   <section id="project-hero">
-    <p class="hero-eyebrow">Project 04</p>
-    <h1 class="hero-name" style="font-size: clamp(3rem, 6vw, 4.8rem);">Interactive<br><span>Kiosk Redesign</span></h1>
+    <p class="hero-eyebrow">Project 01 // Museum UX &amp; Product Design</p>
+    <h1 class="hero-name" style="font-size: clamp(2.8rem, 5.5vw, 4.8rem);">Terra Cotta Warriors<br><span>Interactive Kiosk Redesign</span></h1>
     
     <div class="project-meta" style="display: flex; flex-wrap: wrap; gap: 4rem; margin-top: 3.5rem; text-align: left;">
       <div><span><strong>Enterprise Partner:</strong><br>The Children's Museum of Indianapolis</span></div>
-      <div><span><strong>Target User Base:</strong><br>Children (Ages 7-10) &amp; Caregivers</span></div>
-      <div><span><strong>Deployment Scope:</strong><br>Spring 2025 · Experience Studio</span></div>
+      <div><span><strong>Target User Base:</strong><br>Children (Ages 7–10) &amp; Caregivers</span></div>
+      <div><span><strong>Role &amp; Team:</strong><br> UX Research &amp; Prototyping (Team of 10)</span></div>
+      <div><span><strong>Timeline:</strong><br>Spring 2025 · Purdue Experience Studio</span></div>
     </div>
   </section>
 
   <main class="case-study-body">
     
+    <!-- THE STRATEGIC CHALLENGE -->
     <h2 class="phase-heading">The Challenge</h2>
     <div class="project-desc">
       <p>
-        Partnering with the world's largest children's museum, our 10-student squad within Purdue University's UXD program was tasked with completely redesigning the legacy "Paint a Warrior" interactive kiosk inside the National Geographic <em>Treasures of the Earth</em> permanent gallery exhibit. 
+        Partnering with the world's largest children's museum, our team redesigned the legacy "Paint a Warrior" interactive kiosk inside the National Geographic <em>Treasures of the Earth</em> permanent gallery exhibit.
       </p>
       <p>
-        The original Flash-based installation was meant to teach children how archaeologists identify and restore the vibrant, ancient mineral colors originally painted onto China's legendary Terra Cotta Warriors. However, the existing installation suffered from extreme drop-off rates: the user interface was laggy, text-heavy instructions caused instant cognitive fatigue, and a clunky 4-way mechanical joystick failed to map intuitively to the actions on screen. Physical elements, like a massive rotary wheel, were completely disconnected from the digital system, causing intergenerational frustration and abandonment within seconds.
+        The original Flash-based kiosk aimed to teach young visitors how archaeologists restored the natural colors of ancient China's Terra Cotta Warriors. However, the experience was outdated, confusing, and unresponsive. Children dropped off and abandoned the activity in under 30 seconds due to wordy instructions, linear steps, and a four-way mechanical joystick that felt counter-intuitive. Massive physical controls (like an oversized wheel) had zero visual connection to the digital screen, frustrating children and leaving accompanying parents with no way to scaffold the learning experience.
       </p>
     </div>
 
-    <h2 class="phase-heading">Milestone 1: Museum Ethnography &amp; Discovery Mapping</h2>
+    <!-- RECRUITER VISUAL 1: THE LEGACY SETUP & PROBLEM SPACE -->
+<div class="image-placeholder-block compact-view">
+  <img src="images/children's_museum/Full Picture.jpg" alt="Legacy Paint-a-Warrior kiosk setup in Treasures of the Earth exhibit" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+  <div class="image-wireframe-box" style="display: none;">
+    <strong>[ PHOTO: TERRACOTTA WARRIORS KIOSK IN MUSEUM EXHIBIT ]</strong>
+    <span>Shows the original joystick, oversized wheel, and Flash screen during initial field visit</span>
+  </div>
+  <span>Figure 1: Kiosk &amp; Friction Points in "Treasures of the Earth"</span>
+</div>
+
+    <!-- MILESTONE 1: RESEARCH & ETHNOGRAPHY -->
+    <h2 class="phase-heading">Milestone 1: Museum Research &amp; Discovery Mapping</h2>
     <div class="project-desc">
       <p>
-        We initiated our research sprint by conducting a dual-track discovery phase combining a comprehensive literature review on child developmental psychology with structured, on-site field observations at the museum during public hours. By tracking micro-interactions, pacing loops, and facial expressions from various observation angles, our team synthesized three foundational friction points:
+        We opened with a structured, on-site field study before and during public museum operating hours. We recorded timed behavioral observations of children and caregivers, mapping dwell times, drop-off points, and verbal interactions. We paired this fieldwork with secondary literature on child cognitive stages and parent-child co-play stances.
       </p>
       <ul class="doc-list">
-        <li><strong>Single-User Bottlenecking:</strong> Kiosk ergonomics and interface mapping implicitly forced single-user engagement. This hardware configuration isolated children from accompanying parents and caretakers, blocking natural family scaffolding opportunities.</li>
-        <li><strong>Tactile Spatial Mismatch:</strong> Children exhibited intense desires to touch the tactile elements of the exhibit. However, spinning the large physical wheel provided zero real-time system responses on screen, causing fast system abandonment at early stages.</li>
-        <li><strong>Abstract Text Barriers:</strong> Younger target users lack the patience to process dense text layout paths on digital panels, relying instead on blind trial-and-error behaviors that completely bypass the underlying educational goals of the museum.</li>
+        <li><strong>Early Abandonment:</strong> The average guest spent under 20–30 seconds before walking away. Over 70% of child visitors abandoned the interaction during the "Analyze Traces of Paint" step due to repetitive, unskippable screens.</li>
+        <li><strong>Physical-Digital Disconnect:</strong> Children naturally rushed to touch physical objects—specifically spinning the large wheel—expecting immediate on-screen feedback. When nothing happened, they assumed the exhibit was broken.</li>
+        <li><strong>The Parent Guidance:</strong> While children struggled with dense digital text, engagement skyrocketed when caregivers actively prompted them. We recognized that the kiosk needed to support co-play rather than solo interaction.</li>
       </ul>
     </div>
 
-    <h2 class="phase-heading">Milestone 2: Co-Design Sketching &amp; Viewport Prototyping</h2>
+    <!-- RECRUITER VISUAL 2: RESEARCH SYNTHESIS -->
+    <div class="image-placeholder-block">
+      <!-- Replace with photo/screenshot of Affinity Diagram sticky note synthesis -->
+      <img src="images/children's_museum/Affinity Diagram.jpg" alt="Thematic Affinity Diagram of Observational Findings" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-wireframe-box" style="display: none;">
+        <strong>[ DIAGRAM: OBSERVATION THEMES &amp; JOURNEY MAP ]</strong>
+        <span>Sticky-note affinity mapping clustered by physical friction, cognitive load, and drop-off steps</span>
+      </div>
+      <span>Figure 2: Thematic Affinity Clustering &amp; Touchpoint Drop-off Mapping</span>
+    </div>
+
+    <!-- MILESTONE 2: IDEATION & LOW-FI TESTING -->
+    <h2 class="phase-heading">Milestone 2: Design Ideation &amp; Prototype Testing</h2>
     <div class="project-desc">
       <p>
-        To balance tactile play with history and education, we generated 37 unique concepts through structured sketching sprints. We discarded purely digital ideas to focus on an ecosystem that blends physical and digital interactions, utilizing a dual-screen structural layout that separates educational guidance from gameplay.
+        Our team conducted two rapid sketching sprints, generating 37 concepts split across on-screen interactions and physical kiosk modifications. To solve the single-user bottleneck, we moved away from a single screen toward a <strong>Nintendo DS-inspired dual-screen layout</strong>: a top narrative display placed at adult eye height and a bottom interactive touchscreen placed at child height.
       </p>
       <p>
-        We built intermediate blueprint prototypes using a specialized monochrome scheme—the museum's standard for layout evaluation—and introduced an animated <strong>digital archaeologist character guide</strong> to act as a system mentor. We tested this layout through formal usability protocols with four children (ages 8-13) and five professional museum development stakeholders.
+        To test our concepts, we created a physical card prototype along with low-fidelity digital wireframes using the museum's monochrome "blueprint" format. We then spent a full testing day on-site with museum staff and children aged 8–13.
+      </p>
+    </div>
+
+    <!-- RECRUITER VISUAL 3: SKETCHES & DIVERGENT THINKING -->
+    <div class="image-placeholder-block">
+      <!-- Replace with compilation of hand sketches (stylus, wheel redesign, archaeologist NPC) -->
+      <img src="images/children's_museum/First Sketches.jpg" alt="Initial hand sketches for physical and digital kiosk interactions" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-wireframe-box" style="display: none;">
+        <strong>[ SKETCHES: 37 EXPLORATORY PHYSICAL &amp; DIGITAL CONCEPTS ]</strong>
+        <span>Side-by-side sketches showing the archaeologist guide, physical mortar &amp; pestle, and paintbrush stylus</span>
+      </div>
+      <span>Figure 3: Early Concept Sketching Sprint: Tangible Tools &amp; Dual-Screen Architecture</span>
+    </div>
+
+    <div class="project-desc">
+      <p>
+        Key takeaways from on-site concept testing:
       </p>
       <ul class="doc-list">
-        <li><strong>Tactile Preferences:</strong> In-person evaluations proved children universally favored physical haptic feedback (like a paintbrush stylus) over a traditional mechanical joystick, noting it made the archaeological restoration process feel "real."</li>
-        <li><strong>A/B Layout Optimization:</strong> Through rigorous multi-variate testing, we discovered that museum staff and children overwhelmingly preferred a single unified digital/physical mortar bowl concept over an abstract, multi-bowl layout to handle mineral preparation.</li>
+        <li><strong>A/B Layout Testing:</strong> We tested a 5-bowl physical mixing layout against a single unified bowl. 4 out of 5 staff members and all child testers preferred the single bowl for clarity, proving that simpler physical affordances reduced confusion.</li>
+        <li><strong>Tangible Tool Preference:</strong> Children unanimously preferred a paintbrush/pestle tool over the joystick, validating our hypothesis that children learn best through tangible, sensory-rich interactions.</li>
+        <li><strong>Guide Character Necessity:</strong> Children struggled with dry text prompts, so we introduced an illustrated Archaeologist Non-Player Character (NPC) to voice instructions and cheer progress.</li>
       </ul>
     </div>
 
-    <h2 class="phase-heading">Milestone 3: High-Fidelity Hybrid Play Synthesis</h2>
-    <div class="project-desc">
-      <p>
-        Our final high-fidelity design completely modernizes the exhibit, replacing outdated components with an asymmetric, dual-screen hardware cabinet design. The top display handles spoken character dialogue and immersive narrative tracking, while the bottom touchscreen sits at an approachable, ADA-compliant altitude optimized for independent child manipulation.
-      </p>
-      <p>
-        We replaced the clunky joystick with a custom-molded, dual-ended <strong>stylus-pestle hybrid tool</strong> paired with raised, haptic mineral buttons. The user journey mimics genuine archaeological research protocols: visitors pick a warrior via a swiping carousel, physically press textured mineral blocks to identify pigment origins, use the pestle tool inside a physical mortar casing to crush minerals, drag the stylus to "crack an egg" binder inline, and use the paintbrush end to apply custom colors to their 3D warrior statue.
-      </p>
+    <!-- RECRUITER VISUAL 4: PHYSICAL-DIGITAL TESTING RIG -->
+    <div class="image-placeholder-block">
+      <!-- Replace with photo of testing in progress at the museum with children/staff -->
+      <img src="images/children's_museum/Physical Prototype.jpg" alt="Physical prototype testing setup at The Children's Museum of Indianapolis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-wireframe-box" style="display: none;">
+        <strong>[ PHOTO: TESTING RIG IN ACTION AT THE MUSEUM ]</strong>
+        <span>Low-fi cardboard desk with textured mineral buttons and tablet screen during on-site user testing</span>
+      </div>
+      <span>Figure 4: On-Site Concept Validation with Museum Guests and Exhibit Developers</span>
     </div>
 
+    <!-- MILESTONE 3: HIGH-FIDELITY SOLUTION -->
+    <h2 class="phase-heading">Milestone 3: High-Fidelity Prototyping</h2>
+    <div class="project-desc">
+      <p>
+        Our final solution bridges digital screens and real-world archaeology into a seamless multi-sensory experience. Instead of abstract button clicks, the child acts as a true field researcher:
+      </p>
+      <ul class="doc-list">
+        <li><strong>Custom Dual-Ended Stylus:</strong> Features a rubber pestle end for grinding minerals and a brush end for coloring statues.</li>
+        <li><strong>Textured Mineral Buttons:</strong> Tactile buttons embedded directly into the table surface allow children to touch real mineral textures (malachite, azurite, cinnabar) before grinding them.</li>
+        <li><strong>Tactile Minigames:</strong> Replaces repetitive joystick tapping with engaging micro-tasks: dragging a pestle to crush minerals, tracing a line to crack an egg binder, and swiping to stir pigments.</li>
+      </ul>
+    </div>
+
+    <!-- RECRUITER VISUAL 5: HIFI SCREENS (TOP + BOTTOM COORDINATION) -->
+    <div class="image-placeholder-block">
+      <!-- Replace with high-fidelity Figma mockup of top & bottom screen flow -->
+      <img src="images/children's_museum/UI Mockups.jpg" alt="High-fidelity dual screen UI design across the 8-step journey" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-wireframe-box" style="display: none;">
+        <strong>[ UI MOCKUPS: TOP NARRATIVE SCREEN &amp; BOTTOM TOUCHSCREEN ]</strong>
+        <span>High-fidelity Figma screens showing warrior selection carousel, mineral crushing, egg cracking, and painting</span>
+      </div>
+      <span>Figure 5: High-Fidelity Dual-Screen Interface System &amp; Archeologist NPC Guide</span>
+    </div>
+
+    <!-- THE TIME PRESSURE INNOVATION -->
     <div class="outcome-callout">
-      <h4>The Final Concept: Timed Oxidation Simulation</h4>
+      <h4>Historical Authenticity: 60-Second Timed Oxidation Window</h4>
       <p>
-        To align with real-world archaeological constraints, the high-fidelity system integrates a <strong>60-second timed painting window</strong>. When ancient Terra Cotta Warriors are excavated, their exposed lacquered paint layers oxidize and peel off within seconds of hitting the air, requiring immediate chemical preservation.
+        In real excavations, exposed ancient lacquer oxidizes and flakes away within seconds of contact with air. We gamified this historical reality into a <strong>60-second painting challenge</strong>.
       </p>
       <p>
-        By gamifying this tension, our software engine pushes children and adults into high-engagement collaborative problem-solving. Caregivers actively read hints aloud from the top viewport, while children use the haptic tools on the bottom deck to preserve their chosen statue before time expires. Testing validated a 10/10 fun index score from visitors, extending the average interaction duration while cleanly reinforcing the museum's core learning objectives.
+        Caregivers read guidance and historical context from the upper screen while children paint their statue on the lower desk before time expires. This transformed a passive kiosk into a cooperative family race against the clock, achieving a 10/10 fun score in testing while fully meeting museum learning goals.
       </p>
     </div>
+
+    <!-- PROJECT CONSTRAINTS & LIMITATIONS (CRITICAL FOR RECRUITERS) -->
+    <h2 class="phase-heading">Project Scope &amp; Constraints</h2>
+    <div class="project-desc">
+      <p>
+        Designing inside an active institution required navigating several strict engineering and ethical constraints:
+      </p>
+      <ul class="doc-list">
+        <li><strong>Fixed Learning Objectives:</strong> Museum educational standards were strictly locked. We had to rethink the journey without changing the historical facts or chemical steps (minerals, egg binders, oxidation).</li>
+        <li><strong>Ergonomic Requirements:</strong> The lower touchscreen and physical tools had to be reachable from a seated wheelchair position while remaining sturdy enough for heavy daily use by thousands of children.</li>
+        <li><strong>Youth Testing Protocols:</strong> Testing with minors required strict compliance, museum parental consent forms, requiring us to design child-friendly testing scripts.</li>
+      </ul>
+    </div>
+
   </main>
 
   <div id="global-teleport-leon" class="global-patrol-leon">
